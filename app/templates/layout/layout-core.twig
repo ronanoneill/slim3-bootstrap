@@ -1,0 +1,41 @@
+{#
+/**
+ * Core Layout Wrapper
+ *
+ * @category Templates
+ * @package  Slim3 Bootstrap
+ * @author   Rónán O'Neill <youcanmailronan@gmail.com>
+ * @license  Proprietary
+ * @link     N/A
+ */
+#}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootstrap</title>
+
+        <!-- Meta / Links /  -->
+        {{ include('common/meta.twig') }}
+
+        <!-- External CSS -->
+        <link rel="stylesheet" type="text/css" href="/static/css/external/normalize.min.css">
+
+        <!-- Bootstrap CSS -->
+        {% for stylesheet in cssincludes %}
+        <link rel="stylesheet" type="text/css" href="/static/css/stylesheets/{{stylesheet}}.css">
+        {% endfor %}
+    </head>
+    <body>
+
+        {% block layoutcontent %}Core Layout{% endblock %}
+
+        <!-- External JS -->
+
+        <!-- Bootstrap JS -->
+        {% for javascript in jsincludes %}
+        <script type="text/javascript" src="/static/js/{{javascript}}.js"></script>
+        {% endfor %}
+
+    </body>
+</html>

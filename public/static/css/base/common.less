@@ -1,0 +1,70 @@
+/*
+ * Some handy basic defaults, heavily borrowed from HTML5 Boilerplate
+ * https://html5boilerplate.com/
+ */
+html {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+body {
+    background: @background-clr;
+    font-size: 13px;
+    // font-family: 'Cuprum', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    color: #333;
+    height: 100%;
+}
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ */
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Default anchor tag styling
+ */
+a {
+    color: #004DDA;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+    &:active {}
+    &:visited {}
+}
+
+.clear { clear: both; }
+.right { float: right; }
+.left { float: left; }
+
+/*
+ * Default layout specific styles
+ */

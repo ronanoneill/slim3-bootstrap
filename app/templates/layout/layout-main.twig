@@ -1,0 +1,26 @@
+{#
+/**
+ * Main Content Layout Wrapper
+ *
+ * @category Templates
+ * @package  Slim3 Bootstrap
+ * @author   Rónán O'Neill <youcanmailronan@gmail.com>
+ * @license  Proprietary
+ * @link     N/A
+ */
+#}
+
+{% extends "layout/layout-core.twig" %}
+
+{% block layoutcontent %}
+
+    <!-- Header -->
+    {{ include('common/header.twig') }}
+
+    <!-- Page Content -->
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    {{ include('common/footer.twig') }}
+
+{% endblock %}
