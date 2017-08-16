@@ -1,0 +1,43 @@
+version: '2'
+
+services:
+
+    nginx:
+        build: ./docker/images/nginx
+        container_name: bootstrap_nginx
+        depends_on:
+            - php
+        expose:
+            - 80
+            - 443
+        links:
+            - php
+        ports:
+            - 3001:80
+        volumes_from:
+            - php
+
+    php:
+        build: ./docker/images/php
+        container_name: bootstrap_php
+        expose:
+            - 9000
+        volumes:
+            - composer-cache:/root/composer/cache
+            - .:/var/www/bootstrap
+
+    nodejs:
+        build: ./docker/images/nodejs
+        command: "true"
+        container_name: bootstrap_nodejs
+        volumes:
+            - npm-cache:/root/.npm
+        volumes_from:
+            - php
+
+volumes:
+
+    composer-cache:
+        driver: local
+    npm-cache:
+        driver: local

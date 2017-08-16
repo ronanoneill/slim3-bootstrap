@@ -1,0 +1,20 @@
+{
+    "name": "bootstrap",
+    "version": "0.0.1",
+    "description": "Bootstrap",
+    "author": "Rónán O'Neill",
+    "license": "ISC",
+    "main": "gruntfile.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ronanoneill/slim3-bootstrap.git"
+    },
+    "homepage": "https://github.com/ronanoneill/slim3-bootstrap",
+    "dependencies": {},
+    "devDependencies": {
+        "grunt": "^1.0.1",
+        "grunt-contrib-less": "^1.4.1",
+        "grunt-contrib-watch": "^1.0.0",
+        "jit-grunt": "^0.10.0"
+    }
+}
